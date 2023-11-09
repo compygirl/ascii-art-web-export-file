@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <title>{{.StatusCodeAndText}}</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            background: url('assets/styles/background4.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            size-adjust: 100%;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', monospace, 'Trebuchet MS', sans-serif;
+            position: fixed;
+            margin-top: 15%;
+            margin-left: 45%;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+
+        }
+
+        p {
+            position: fixed;
+            font-size: 1.5em;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            justify-self: center;
+            margin-left: 49%;
+            margin-top: 17%;
+            /* margin-left: 35%;
+            margin-right: 50%; */
+
+        }
+        .center {
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            justify-self: center;
+            margin-top: 18.5%;
+            margin-left: 48.5%;
+        }
+      
+    </style>
+    <div>
+        <h1>ERROR {{.StatusCodeAndText}}</h1> <br>
+        <p>{{.MessageError}}</p> <br>
+        <a href="/" class="center">Go back to main page</a><br>
+    </div>
+</body>
+
+</html>

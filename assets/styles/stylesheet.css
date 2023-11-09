@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace, 'Poppins';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/assets/styles/background4.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    size-adjust: 100%;
+
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+
+.title {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.wrapper {
+    position: center;
+    width: 1000px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(80px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+
+    overflow: auto;
+    justify-content: center;
+    align-content: center;
+  
+
+
+}
+
+.wrapper pre {
+    position: center;
+    padding-top: 20px;
+    margin-left: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.choice {
+
+    font-size: 1.5em;
+    color: #fff;
+    display: flex;
+}
+
+
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius:  6px;
+    cursor: pointer;
+    font-size:  1em;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.rdbtn {
+    position: center;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4px;
+    outline: red;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.submit {
+    width: 300px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    transition: .5s;
+    margin-bottom: 50px;
+    margin-left: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Add this to remove default underline */
+}
+
+.submit:hover {
+    background: #fff;
+    color: #162938;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom:  2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box textarea:focus~label,
+.input-box textarea:valid~label {
+    top: -5px;
+}
+
+
+.input-box textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+
+}

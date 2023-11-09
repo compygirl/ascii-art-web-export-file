@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <title>Ascii-Art-Web</title>
+  <link rel="stylesheet" type="text/css" href="assets/styles/stylesheet.css" >
+  <link rel="stylesheet" type="text/css" href="assets/styles/reset.css" >
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Ascii-Art-Web</h1>
+        <nav class="navigation">
+            <a href="https://01.alem.school/git/bbilisbe/ascii-art-web-stylize">GitHub</a>
+            <a href="https://01.alem.school/intra/alem/profile?event=621">Alem</a>
+        </nav>
+    </header>
+
+    
+
+        <form method = "POST" action="/ascii-art">
+            <h2 class="choice">Please select your favorite Font:</h2>
+            <br>
+         
+            <div class="rdbtn">
+                <input type="radio" id="standard" name="font" value="standard" checked>
+                <label for="standard">standard</label><br>
+                <input type="radio" id="shadow" name="font" value="shadow">
+                <label for="shadow">shadow</label><br>
+                <input type="radio" id="thinkertoy" name="font" value="thinkertoy">
+                <label for="thinkertoy">thinkertoy</label>
+            </div>
+        
+          
+            <br>  
+        
+            <textarea id="w3review" name="w3review1" placeholder="write here" class="input-box" ></textarea>
+            <input type="submit" value="Submit" class="submit">
+            </br>
+
+            <div class="wrapper"><pre>{{.}}</pre></div>
+
+        </form>
+
+        <br>
+        {{ if . }}
+        <div class="button-container">
+        <a href="/export" class="submit">Download ASCII Art (CSV)</a>
+        </div>
+        {{ end }}  
+
+</body>
+
+
